@@ -15,9 +15,10 @@ public class EnemyManager : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed= data.speed;
     }
+
     void OnEnable()
     {
-        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
+        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
     }
 
     void Update()
