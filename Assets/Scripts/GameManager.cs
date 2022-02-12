@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject rightHandControllerGO;
     public GameObject leftHandControllerGO;
+    public Player player;
 
     //TODO creare input system per gestione eventi sui tasti dei controller
 }
