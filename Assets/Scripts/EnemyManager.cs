@@ -13,23 +13,17 @@ public class EnemyManager : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed= data.speed;
+        agent.speed = data.speed;
     }
-
     void OnEnable()
     {
-        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
+        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
     }
 
     void Update()
     {
-        Move();
-    }
+                
+        agent.destination=GameManager.instance.player.transform.position; 
 
-    // move toward player
-    public void Move()
-    {
-        agent.destination = GameManager.instance.player.transform.position; 
-        agent.Move(Vector3.zero);
     }
 }
