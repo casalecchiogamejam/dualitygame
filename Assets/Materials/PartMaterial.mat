@@ -62,7 +62,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _OpaqueCullMode: 2
-    - _PresenceFactor: 1.66
+    - _PresenceFactor: 1.39
     - _RenderQueueType: 4
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -89,6 +89,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
+    - _Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
