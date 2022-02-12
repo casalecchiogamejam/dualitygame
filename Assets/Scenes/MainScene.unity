@@ -1532,14 +1532,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404171418}
-  m_LocalRotation: {x: 0.096367076, y: -0, z: -0, w: 0.99534595}
-  m_LocalPosition: {x: 0, y: 8.15, z: -37.8}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1826422698}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.06, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &404171420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1810,11 +1810,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
-        type: 3}
-      propertyPath: spawnDelaySeconds
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -2774,6 +2769,7 @@ GameObject:
   - component: {fileID: 1600688526}
   - component: {fileID: 1600688528}
   - component: {fileID: 1600688529}
+  - component: {fileID: 1600688530}
   m_Layer: 0
   m_Name: Player XR
   m_TagString: Untagged
@@ -2806,7 +2802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600688525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 12.4, z: -36.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2843,6 +2839,20 @@ MonoBehaviour:
   experienceToLevelUp: 0
   experience: 0
   score: 0
+--- !u!136 &1600688530
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600688525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1661105452
 GameObject:
   m_ObjectHideFlags: 0

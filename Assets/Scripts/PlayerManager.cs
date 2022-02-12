@@ -18,9 +18,9 @@ public class PlayerManager : MonoBehaviour
         get { return experience / experienceToLevelUp; }
     }
 
-    void OnCollisionEnter(Collision collisionInfo)
+    void OnTriggerEnter(Collider collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "Enemy")
+        if (collisionInfo.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("YOU DIED");
             Destroy(gameObject);

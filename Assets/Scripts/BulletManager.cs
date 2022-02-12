@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BulletManager : MonoBehaviour
 {
-    [SerializeField] Rigidbody rigidbody;
-
     public float secondsToWaitBeforeDestroy;
     public float speed;
 
@@ -17,13 +15,12 @@ public class BulletManager : MonoBehaviour
 
     void Update()
     {
-        transform.position += Vector3.forward * speed * Time.deltaTime;
-       // rigidbody.MovePosition(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(transform.forward * speed * Time.deltaTime);
     }
 
-    void OnCollisionEnter(Collision collisionInfo)
+    void OnTriggerEnter(Collider collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "Enemy")
+        if (collisionInfo.gameObject.CompareTag("Enemy"))
         {
             EnemyManager enemy = collisionInfo.gameObject.GetComponentInParent<EnemyManager>();
 

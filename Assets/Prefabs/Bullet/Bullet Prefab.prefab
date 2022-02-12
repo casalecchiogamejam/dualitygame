@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3536473055362146044}
   - component: {fileID: 3536473055362146047}
   - component: {fileID: 2475619573255165040}
-  - component: {fileID: 4810265968378439294}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -99,7 +98,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3536473055362146046}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -116,25 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0800eee3a11a554584ae88b784a2ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
   secondsToWaitBeforeDestroy: 10
   speed: 1
---- !u!54 &4810265968378439294
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3536473055362146046}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3536473055791072425
 GameObject:
   m_ObjectHideFlags: 0
@@ -10173,7 +10155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0800eee3a11a554584ae88b784a2ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 4810265968378439294}
   secondsToWaitBeforeDestroy: 10
   speed: 1
 --- !u!1 &8264944307339155200

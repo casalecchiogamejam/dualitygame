@@ -37,7 +37,7 @@ public class GenericObjectPooling : MonoBehaviour
         else
         {
             GameObject toInstantiate = Instantiate(prefabToInstantiate);
-            toInstantiate.transform.SetParent(gameObject.transform);
+            toInstantiate.transform.SetParent(gameObject.transform, worldPositionStays: false);
             toInstantiate.SetActive(true);
             return toInstantiate;
         }
