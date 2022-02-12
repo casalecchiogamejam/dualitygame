@@ -1765,9 +1765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 132301659}
   enemyPool: {fileID: 1661105453}
-  rightHandControllerGO: {fileID: 0}
-  leftHandControllerGO: {fileID: 0}
-  player: {fileID: 0}
+  rightHandControllerGO: {fileID: 209504802}
+  leftHandControllerGO: {fileID: 65550227}
+  player: {fileID: 1600688529}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,6 +2523,7 @@ GameObject:
   - component: {fileID: 1600688527}
   - component: {fileID: 1600688526}
   - component: {fileID: 1600688528}
+  - component: {fileID: 1600688529}
   m_Layer: 0
   m_Name: Player XR
   m_TagString: Untagged
@@ -2577,6 +2578,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1600688529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600688525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d591f1eb9cfd805468849cf3f703a1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceToLevelUp: 0
+  experience: 0
+  score: 0
 --- !u!1 &1661105452
 GameObject:
   m_ObjectHideFlags: 0
