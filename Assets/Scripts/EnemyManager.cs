@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
     }
     void OnEnable()
     {
-        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
+        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
     }
 
     void Update()
