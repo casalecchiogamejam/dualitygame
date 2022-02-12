@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed= data.speed;
+        agent.speed = data.speed;
     }
     void OnEnable()
     {
@@ -22,13 +22,8 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-        Move();
-    }
+                
+        agent.destination=GameManager.instance.player.transform.position; 
 
-    // move toward player
-    public void Move()
-    {
-        agent.destination = GameManager.instance.player.transform.position; 
-        agent.Move(Vector3.zero);
     }
 }
