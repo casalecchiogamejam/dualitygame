@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public GameObject bulletPrefab;
+    public GenericObjectPooling bulletPool;
+    public GenericObjectPooling enemyPool;
     public GameObject rightHandControllerGO;
     public GameObject leftHandControllerGO;
     public Player player;
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
             _instance = GetComponent<GameManager>();
         }
     }
+
 
     //TODO creare input system per gestione eventi sui tasti dei controller
 }

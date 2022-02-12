@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy_GO : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
-    public Enemy_SO data;
+    public float secondsToWaitBeforeDestroy;
+    public EnemyScriptableObject data;
     private NavMeshAgent agent;
+
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed= data.speed;
+    }
+    void OnEnable()
+    {
+        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
     }
 
     void Update()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public Enemy_GO spawnedEnemy;
+    public EnemyManager spawnedEnemy;
 
     public float spawnDelaySeconds;
 
@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            Enemy_GO newEnemy = GameObject.Instantiate(spawnedEnemy, transform.position, transform.rotation);
+            GameObject newEnemy = GameManager.instance.enemyPool.pool.Get();
             yield return new WaitForSecondsRealtime(spawnDelaySeconds);
         }
     }

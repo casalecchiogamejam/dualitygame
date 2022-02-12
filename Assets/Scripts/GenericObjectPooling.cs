@@ -35,4 +35,13 @@ public class GenericObjectPooling : MonoBehaviour
         }
         return pool;
     }
+
+    public IEnumerator DestroyObjectInstantiatedFromPool(GameObject goToDestroy, float secondsToWaitBeforeDestroy)
+    {
+        yield return new WaitForSeconds(secondsToWaitBeforeDestroy);
+
+        if (gameObject != null && gameObject.activeInHierarchy)
+            pool.Release(goToDestroy);
+    }
+
 }
