@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
             if (_instance == null)
             {
                 GameObject go = new GameObject("GameManager");
-                go.AddComponent<GameManager>();
+                _instance = go.AddComponent<GameManager>();;
             }
             return _instance;
         }
@@ -24,6 +24,14 @@ public class GameManager : MonoBehaviour
     public GameObject rightHandControllerGO;
     public GameObject leftHandControllerGO;
     public Player player;
+
+    private void Awake()
+    {
+        if(_instance==null)
+        {
+            _instance = GetComponent<GameManager>();
+        }
+    }
 
     //TODO creare input system per gestione eventi sui tasti dei controller
 }
