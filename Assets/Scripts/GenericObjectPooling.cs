@@ -7,7 +7,7 @@ public class GenericObjectPooling : MonoBehaviour
 {
     public int numToInstantiate;
     public GameObject prefabToInstantiate;
-    public List<GameObject> inactivePoolObjs;
+    private List<GameObject> inactivePoolObjs;
 
     private void Awake()
     {
