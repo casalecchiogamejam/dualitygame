@@ -11,25 +11,25 @@ public class GenericObjectPooling : MonoBehaviour
     public GameObject prefabToInstantiate;
     public IObjectPool<GameObject> pool;
 
-    private void Start()
+    private void Awake()
     {
         CreateNewObjectPool();
     }
 
-    public virtual IObjectPool<GameObject> CreateNewObjectPool()
+    public IObjectPool<GameObject> CreateNewObjectPool()
     {
         if (pool == null)
         {
             pool = new ObjectPool<GameObject>(createFunc: () => 
                                                                 {
                                                                     GameObject newPooledGO = Instantiate(prefabToInstantiate);
-                                                                    newPooledGO.transform.parent = this.gameObject.transform;
+                                                                    newPooledGO.transform.parent = gameObject.transform;
                                                                     return newPooledGO;
                                                                 },
                                                 actionOnGet: (obj) => obj.SetActive(true),
                                                 actionOnRelease: (obj) => obj.SetActive(false),
                                                 actionOnDestroy: (obj) => Destroy(obj),
-                                                collectionCheck: false,
+                                                collectionCheck: true,
                                                 defaultCapacity: defaultPoolSize,
                                                 maxSize: maxPoolSize);
         }
@@ -42,6 +42,8 @@ public class GenericObjectPooling : MonoBehaviour
 
         if (gameObject != null && gameObject.activeInHierarchy)
             pool.Release(goToDestroy);
+
+        Debug.Log(pool.CountInactive);
     }
 
 }
