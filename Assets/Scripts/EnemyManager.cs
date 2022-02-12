@@ -22,8 +22,12 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-                
-        agent.destination=GameManager.instance.player.transform.position; 
+        agent.destination = GameManager.instance.player.transform.position;
+    }
 
+
+    public void OnBulletHit()
+    {
+        Destroy(this.gameObject); // TODO: remove from poll
     }
 }
