@@ -208,12 +208,12 @@
                 },
                 {
                     "name": "Trigger",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "6f8da412-a486-42be-9aeb-400a857a37dc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -586,7 +586,7 @@
                     "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Trigger",
                     "isComposite": false,
                     "isPartOfComposite": false

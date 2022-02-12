@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   life: 1
-  speed: 20
+  speed: 5
+  experience: 1
+  score: 10

@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class BulletManager : MonoBehaviour
 {
+    [SerializeField] Rigidbody rigidbody;
+
     public float secondsToWaitBeforeDestroy;
     public float speed;
 
 
     void OnEnable()
     {
-        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
+        DestroyObjectAfter(secondsToWaitBeforeDestroy);
     }
 
     void Update()
     {
         transform.position += Vector3.forward * speed * Time.deltaTime;
+       // rigidbody.MovePosition(Vector3.forward * speed * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collisionInfo)
@@ -27,7 +30,16 @@ public class BulletManager : MonoBehaviour
             if (enemy == null)
                 Debug.LogWarning("missing EnemyManager component from " + collisionInfo.gameObject.name);
             else
+            {
                 enemy.OnBulletHit();
+                DestroyObjectAfter(0);
+            }
         }
     }
+
+    void DestroyObjectAfter(float seconds)
+    {
+        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, seconds));
+    }
+
 }

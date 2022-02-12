@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
 
     public GenericObjectPooling bulletPool;
     public GenericObjectPooling enemyPool;
-    public GameObject rightHandControllerGO;
-    public GameObject leftHandControllerGO;
-    public Player player;
+    public PlayerManager player;
 
     private void Awake()
     {

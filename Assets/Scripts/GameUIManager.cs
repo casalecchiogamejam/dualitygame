@@ -11,7 +11,7 @@ public class GameUIManager : MonoBehaviour
 
     private void Update()
     {
-        Player player = GameManager.instance.player;
+        PlayerManager player = GameManager.instance.player;
 
         if(player != null)
         {
