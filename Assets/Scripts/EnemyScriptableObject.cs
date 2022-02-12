@@ -7,4 +7,6 @@ public class EnemyScriptableObject : ScriptableObject
 {
     public float life;
     public float speed;
+    public int experience;
+    public int score;
 }

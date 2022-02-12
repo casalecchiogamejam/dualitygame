@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int experienceToLevelUp;
+
+    public int experience;
+
+    public int score;
+
+    public int level
     {
-        
+        get { return experience / experienceToLevelUp; }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnCollisionEnter(Collision collisionInfo)
     {
-        
+        if (collisionInfo.gameObject.tag == "Enemy")
+        {
+            Debug.Log("YOU DIED");
+            Destroy(this.gameObject);
+        }
     }
+
+    public void OnEnemyKilled(EnemyScriptableObject enemyData)
+    {
+        experience += enemyData.experience;
+        score += enemyData.score;
+    }
+
 }

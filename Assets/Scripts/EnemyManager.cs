@@ -22,6 +22,7 @@ public class EnemyManager : MonoBehaviour
 
     public void OnBulletHit()
     {
+        GameManager.instance.player.OnEnemyKilled(data);
         StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
     }
 }
