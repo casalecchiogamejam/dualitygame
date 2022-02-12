@@ -8,9 +8,6 @@ public class EnemySpawner : MonoBehaviour
 
     public float spawnDelaySeconds;
 
-
-    public GameObject player; // TEMP   
-
     void Start()
     {
         StartCoroutine(SpawnEnemy());
