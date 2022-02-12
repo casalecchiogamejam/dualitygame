@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DefaultVolumeProfile: {fileID: 11400000, guid: 3f2a85375ee6de84f818547718c494cc,
     type: 2}
-  m_LookDevVolumeProfile: {fileID: 11400000, guid: 254c4fe87beb7be4fa72e1681edbed02,
+  m_LookDevVolumeProfile: {fileID: 11400000, guid: 06975be753d448f4b87d013ba90666ff,
     type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
