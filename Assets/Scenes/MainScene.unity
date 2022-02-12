@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,9 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0472ce3dea6f9694fb393775b73d75ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numToInstantiate: 0
+  numToInstantiate: 10
   prefabToInstantiate: {fileID: 588978776091544554, guid: b79cb5f315758bf44b7c35976ae5b87b,
     type: 3}
+  inactivePoolObjs: []
 --- !u!4 &132301660
 Transform:
   m_ObjectHideFlags: 0
@@ -538,7 +539,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 3.4e-44}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1376,6 +1377,7 @@ MonoBehaviour:
   numToInstantiate: 10
   prefabToInstantiate: {fileID: 5952707782763968064, guid: 29e132bb7731c4e4b9ff134698099181,
     type: 3}
+  inactivePoolObjs: []
 --- !u!4 &1661105454
 Transform:
   m_ObjectHideFlags: 0

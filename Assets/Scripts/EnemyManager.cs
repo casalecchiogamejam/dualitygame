@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
-    public float secondsToWaitBeforeDestroy;
     public EnemyScriptableObject data;
     private NavMeshAgent agent;
 
@@ -15,19 +14,14 @@ public class EnemyManager : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = data.speed;
     }
-    void OnEnable()
-    {
-        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, secondsToWaitBeforeDestroy));
-    }
 
     void Update()
     {
         agent.destination = GameManager.instance.player.transform.position;
     }
 
-
     public void OnBulletHit()
     {
-        Destroy(this.gameObject); // TODO: remove from poll
+        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
     }
 }

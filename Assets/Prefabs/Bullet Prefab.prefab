@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToWaitBeforeDestroy: 5
-  speed: 0
+  speed: 1
 --- !u!54 &8356253197865292477
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64,7 +64,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-
 --- !u!1 &588978778048967913
 GameObject:
   m_ObjectHideFlags: 0
