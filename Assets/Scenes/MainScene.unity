@@ -154,8 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0472ce3dea6f9694fb393775b73d75ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPoolSize: 3
-  maxPoolSize: 10
+  numToInstantiate: 0
   prefabToInstantiate: {fileID: 588978776091544554, guid: b79cb5f315758bf44b7c35976ae5b87b,
     type: 3}
 --- !u!4 &132301660
@@ -190,6 +189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Spawner Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
+        type: 3}
+      propertyPath: spawnDelaySeconds
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -1369,8 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0472ce3dea6f9694fb393775b73d75ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPoolSize: 2
-  maxPoolSize: 2
+  numToInstantiate: 10
   prefabToInstantiate: {fileID: 5952707782763968064, guid: 29e132bb7731c4e4b9ff134698099181,
     type: 3}
 --- !u!4 &1661105454

@@ -1,39 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
 
 // This example spawns a random number of GameObject using a pool so that old systems can be reused.
 public class GenericObjectPooling : MonoBehaviour
 {
-    public int defaultPoolSize;
-    public int maxPoolSize;
+    public int numToInstantiate;
     public GameObject prefabToInstantiate;
-    public IObjectPool<GameObject> pool;
+    public List<GameObject> inactivePoolObjs;
 
     private void Awake()
     {
-        CreateNewObjectPool();
+        CreateNewPoolList();
     }
 
-    public IObjectPool<GameObject> CreateNewObjectPool()
+    private void CreateNewPoolList()
     {
-        if (pool == null)
+        inactivePoolObjs = new List<GameObject>();
+        for (int i = 0; i < numToInstantiate; i++)
         {
-            pool = new ObjectPool<GameObject>(createFunc: () => 
-                                                                {
-                                                                    GameObject newPooledGO = Instantiate(prefabToInstantiate);
-                                                                    newPooledGO.transform.parent = gameObject.transform;
-                                                                    return newPooledGO;
-                                                                },
-                                                actionOnGet: (obj) => obj.SetActive(true),
-                                                actionOnRelease: (obj) => obj.SetActive(false),
-                                                actionOnDestroy: (obj) => Destroy(obj),
-                                                collectionCheck: true,
-                                                defaultCapacity: defaultPoolSize,
-                                                maxSize: maxPoolSize);
+            GameObject newPooledObj = Instantiate(prefabToInstantiate);
+            newPooledObj.transform.SetParent(gameObject.transform);
+            inactivePoolObjs.Add(newPooledObj);
         }
-        return pool;
+    }
+
+    public GameObject GetElemFromPoolOrInstantiate()
+    {
+        if(inactivePoolObjs.Count > 0)
+        {
+            GameObject toEnableGO = inactivePoolObjs[0];
+            toEnableGO.SetActive(true);
+            inactivePoolObjs.Remove(toEnableGO);
+            return toEnableGO;
+        }
+        else
+        {
+            GameObject toInstantiate = Instantiate(prefabToInstantiate);
+            toInstantiate.transform.SetParent(gameObject.transform);
+            toInstantiate.SetActive(true);
+            return toInstantiate;
+        }
+    }
+
+    public void DisableElemInScene(GameObject goToDisable)
+    {
+        goToDisable.SetActive(false);
+        inactivePoolObjs.Add(goToDisable);
     }
 
     public IEnumerator DestroyObjectInstantiatedFromPool(GameObject goToDestroy, float secondsToWaitBeforeDestroy)
@@ -41,9 +54,7 @@ public class GenericObjectPooling : MonoBehaviour
         yield return new WaitForSeconds(secondsToWaitBeforeDestroy);
 
         if (gameObject != null && gameObject.activeInHierarchy)
-            pool.Release(goToDestroy);
-
-        Debug.Log(pool.CountInactive);
+            DisableElemInScene(goToDestroy);
     }
 
 }
