@@ -6,18 +6,13 @@ public class WorldsManager : MonoBehaviour
 {
     public Costants.Worlds currentWorld = Costants.Worlds.RealWorld;
 
-    public void ChangeWorld(Costants.Worlds toWorld)
+    public void ChangeWorld()
     {
-        if (currentWorld == toWorld)
-            Debug.Log("changing to current world: " + currentWorld);
+        if (currentWorld == Costants.Worlds.RealWorld)
+            currentWorld = Costants.Worlds.SoulsWorld;
         else
-        {
-            if (currentWorld == Costants.Worlds.RealWorld)
-                currentWorld = Costants.Worlds.SoulsWorld;
-            else
-                currentWorld = Costants.Worlds.RealWorld;
+            currentWorld = Costants.Worlds.RealWorld;
 
-            // TODO: change world graphically
-        }
+        // TODO: change world graphically
     }
 }

@@ -139,6 +139,8 @@ GameObject:
   - component: {fileID: 65550230}
   - component: {fileID: 65550229}
   - component: {fileID: 65550233}
+  - component: {fileID: 65550234}
+  - component: {fileID: 65550235}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -843,6 +845,32 @@ MonoBehaviour:
   m_DefaultActionMap: XRI LeftHand
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!135 &65550234
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65550227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5025
+  m_Center: {x: -36.98, y: 2.1999998, z: -7.8700023}
+--- !u!114 &65550235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65550227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a871f983e641e44bc38cf0ce4e9504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectTime: 3
 --- !u!1 &132301658
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +931,7 @@ GameObject:
   - component: {fileID: 209504806}
   - component: {fileID: 209504805}
   - component: {fileID: 209504804}
+  - component: {fileID: 209504808}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1411,6 +1440,19 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!135 &209504808
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209504802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5025
+  m_Center: {x: -36.98, y: 2.1999998, z: -7.8700023}
 --- !u!1 &222507632
 GameObject:
   m_ObjectHideFlags: 0
