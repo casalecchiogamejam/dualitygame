@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,26 +14,22 @@ public class WeaponVacuum : Weapon
 
     public override void OnTriggerPressed(InputAction.CallbackContext context)
     {
-        Debug.Log(context);
-
-            Debug.Log("started");
-
-            absorbing = true;
-            effect = Instantiate(effectPrefab);
-            effect.transform.position = transform.position;
-        
+        absorbing = true;
+        effect = Instantiate(effectPrefab);
+        effect.transform.position = transform.position;
     }
 
     public override void OnTriggerReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("ended");
-
         absorbing = false;
         Destroy(effect);
     }
 
     void OnTriggerEnter(Collider other)
     {
+        if (!absorbing)
+            return;
+
         if (other.CompareTag("Soul"))
         {
             Debug.Log("diocane");
@@ -46,6 +40,9 @@ public class WeaponVacuum : Weapon
 
     void OnTriggerExit(Collider other)
     {
+        if (!absorbing)
+            return;
+
         if (other.CompareTag("Soul"))
         {
             SoulManager soulManager = other.GetComponent<SoulManager>();
