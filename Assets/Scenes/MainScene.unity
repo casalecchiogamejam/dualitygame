@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 65550231}
   - component: {fileID: 65550230}
   - component: {fileID: 65550229}
-  - component: {fileID: 65550233}
   - component: {fileID: 65550234}
   - component: {fileID: 65550235}
   - component: {fileID: 65550236}
@@ -255,7 +254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65550227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
@@ -357,7 +356,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65550227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -456,7 +455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65550227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
@@ -734,209 +733,6 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &65550233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65550227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1a9029f8-7a46-46b9-9eff-e9ae8365f611
-    m_ActionName: XRI HMD/Position
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: aed87fe6-2b01-4dd2-a8fa-195578fd8158
-    m_ActionName: XRI HMD/Rotation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 83a7af0b-87e3-42c3-a909-95fbf8091e4f
-    m_ActionName: XRI LeftHand/Position
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cb6b7130-2bac-4ef7-abe4-6991ae7d419d
-    m_ActionName: XRI LeftHand/Rotation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d20fc51c-7916-43a7-8b03-706049966aea
-    m_ActionName: XRI LeftHand/Tracking State
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 33754c03-48ec-46ef-9bc6-22ed6bfdd8e8
-    m_ActionName: XRI LeftHand/Select
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c
-    m_ActionName: XRI LeftHand/Select Value
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0c0991c5-d329-4afc-8892-1076b440477c
-    m_ActionName: XRI LeftHand/Activate
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0c3d0ec9-85a1-45b3-839b-1ca43f859ecd
-    m_ActionName: XRI LeftHand/Activate Value
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7e1eced7-c774-4fe5-be8f-d8711f646d9e
-    m_ActionName: XRI LeftHand/UI Press
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f241c1aa-1050-4338-b2bf-a4a47776693d
-    m_ActionName: XRI LeftHand/UI Press Value
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 664a62b0-e178-421d-b3f8-014eec01591d
-    m_ActionName: XRI LeftHand/Haptic Device
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cbeaf823-3b69-4004-8ec8-13ea2ca3fc31
-    m_ActionName: XRI LeftHand/Teleport Select
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a21db72c-4843-4839-b4d0-3ce8d287cb86
-    m_ActionName: XRI LeftHand/Teleport Mode Activate
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 89ce8348-6001-41a3-85b9-f8f2e2dcad7c
-    m_ActionName: XRI LeftHand/Teleport Mode Cancel
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9164e093-ebd4-4923-af32-1b52f31c2d66
-    m_ActionName: XRI LeftHand/Turn
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9693e25f-8a4f-4aed-842f-3961243c69a1
-    m_ActionName: XRI LeftHand/Move
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 21b75b25-12ad-410f-b4f8-a7745b7aca27
-    m_ActionName: XRI LeftHand/Rotate Anchor
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bfa204c7-3c92-4193-bad1-39eb71920042
-    m_ActionName: XRI LeftHand/Translate Anchor
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1600688529}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: OnShootBulletEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6f8da412-a486-42be-9aeb-400a857a37dc
-    m_ActionName: XRI LeftHand/Trigger
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c4990d70-7b8a-4ce1-b03c-da86716b8352
-    m_ActionName: XRI RightHand/Position
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ee6bf5bf-bb0a-4a50-8327-cb654b19e298
-    m_ActionName: XRI RightHand/Rotation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 167ea203-5bfb-4d74-bde9-8026b7483102
-    m_ActionName: XRI RightHand/Tracking State
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ac96c10b-c955-4a46-8e67-bf16bc069b53
-    m_ActionName: XRI RightHand/Select
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
-    m_ActionName: XRI RightHand/Select Value
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 41976d89-60de-4deb-bff9-16b4af96b290
-    m_ActionName: XRI RightHand/Activate
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c3ca6ed7-3d25-44a2-b1d8-5be4eb699370
-    m_ActionName: XRI RightHand/Activate Value
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 65174b45-c2ee-4f90-93bb-fb4084eaaab3
-    m_ActionName: XRI RightHand/UI Press
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 962ac033-ec42-4981-88a4-551ad9be6ecb
-    m_ActionName: XRI RightHand/UI Press Value
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 57b2a1b4-3290-46d6-ac07-4854ee8f91b1
-    m_ActionName: XRI RightHand/Haptic Device
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 02e43582-8973-4940-af06-dff6158e3df2
-    m_ActionName: XRI RightHand/Teleport Select
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
-    m_ActionName: XRI RightHand/Teleport Mode Activate
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d587b60c-39a0-4365-8075-477ce484ba0f
-    m_ActionName: XRI RightHand/Teleport Mode Cancel
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9fb2eb2b-2fb6-4328-8167-10a1bf11b424
-    m_ActionName: XRI RightHand/Turn
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 00a4dc9f-1ee6-4349-b0e9-72d5dccaadd6
-    m_ActionName: XRI RightHand/Move
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9b5d8312-f609-4895-b70f-81a722b2ae11
-    m_ActionName: XRI RightHand/Rotate Anchor
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6f7cf253-7062-443b-b10f-2be48a33f027
-    m_ActionName: XRI RightHand/Translate Anchor
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 28c8af24-6b9f-4ebf-8c70-3cafd586aa73
-    m_ActionName: XRI RightHand/Trigger
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: dcc1936a-cecd-4e79-8600-c49bf1f4d566
-    m_ActionName: XRI LeftHand/Grip
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7006862d-3495-492d-a830-7bbb0c4b8e4c
-    m_ActionName: XRI RightHand/Grip
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Generic XR Controller
-  m_DefaultActionMap: XRI LeftHand
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!135 &65550234
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1385,7 +1181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209504802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
@@ -1487,7 +1283,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209504802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1586,7 +1382,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209504802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
@@ -1926,7 +1722,7 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -1937,7 +1733,7 @@ PrefabInstance:
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -2414,7 +2210,7 @@ PrefabInstance:
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -2571,6 +2367,8 @@ MonoBehaviour:
   player: {fileID: 1600688529}
   worldsManager: {fileID: 1496804840}
   volumeSwitcher: {fileID: 1762808074}
+  gripLeftPressed: 0
+  gripRightPressed: 0
 --- !u!1001 &727833973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3661,6 +3459,7 @@ GameObject:
   - component: {fileID: 1600688529}
   - component: {fileID: 1600688530}
   - component: {fileID: 1600688531}
+  - component: {fileID: 1600688532}
   m_Layer: 0
   m_Name: Player XR
   m_TagString: Player
@@ -3763,6 +3562,213 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1600688532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600688525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a9029f8-7a46-46b9-9eff-e9ae8365f611
+    m_ActionName: XRI HMD/Position
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aed87fe6-2b01-4dd2-a8fa-195578fd8158
+    m_ActionName: XRI HMD/Rotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 83a7af0b-87e3-42c3-a909-95fbf8091e4f
+    m_ActionName: XRI LeftHand/Position
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb6b7130-2bac-4ef7-abe4-6991ae7d419d
+    m_ActionName: XRI LeftHand/Rotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d20fc51c-7916-43a7-8b03-706049966aea
+    m_ActionName: XRI LeftHand/Tracking State
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 694250836}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnGripLeftPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 33754c03-48ec-46ef-9bc6-22ed6bfdd8e8
+    m_ActionName: XRI LeftHand/Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c
+    m_ActionName: XRI LeftHand/Select Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c0991c5-d329-4afc-8892-1076b440477c
+    m_ActionName: XRI LeftHand/Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c3d0ec9-85a1-45b3-839b-1ca43f859ecd
+    m_ActionName: XRI LeftHand/Activate Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7e1eced7-c774-4fe5-be8f-d8711f646d9e
+    m_ActionName: XRI LeftHand/UI Press
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f241c1aa-1050-4338-b2bf-a4a47776693d
+    m_ActionName: XRI LeftHand/UI Press Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 664a62b0-e178-421d-b3f8-014eec01591d
+    m_ActionName: XRI LeftHand/Haptic Device
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cbeaf823-3b69-4004-8ec8-13ea2ca3fc31
+    m_ActionName: XRI LeftHand/Teleport Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a21db72c-4843-4839-b4d0-3ce8d287cb86
+    m_ActionName: XRI LeftHand/Teleport Mode Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89ce8348-6001-41a3-85b9-f8f2e2dcad7c
+    m_ActionName: XRI LeftHand/Teleport Mode Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9164e093-ebd4-4923-af32-1b52f31c2d66
+    m_ActionName: XRI LeftHand/Turn
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9693e25f-8a4f-4aed-842f-3961243c69a1
+    m_ActionName: XRI LeftHand/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b75b25-12ad-410f-b4f8-a7745b7aca27
+    m_ActionName: XRI LeftHand/Rotate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bfa204c7-3c92-4193-bad1-39eb71920042
+    m_ActionName: XRI LeftHand/Translate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f8da412-a486-42be-9aeb-400a857a37dc
+    m_ActionName: XRI LeftHand/Trigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c4990d70-7b8a-4ce1-b03c-da86716b8352
+    m_ActionName: XRI RightHand/Position
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee6bf5bf-bb0a-4a50-8327-cb654b19e298
+    m_ActionName: XRI RightHand/Rotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 167ea203-5bfb-4d74-bde9-8026b7483102
+    m_ActionName: XRI RightHand/Tracking State
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 694250836}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnGripRightPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ac96c10b-c955-4a46-8e67-bf16bc069b53
+    m_ActionName: XRI RightHand/Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
+    m_ActionName: XRI RightHand/Select Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 41976d89-60de-4deb-bff9-16b4af96b290
+    m_ActionName: XRI RightHand/Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c3ca6ed7-3d25-44a2-b1d8-5be4eb699370
+    m_ActionName: XRI RightHand/Activate Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65174b45-c2ee-4f90-93bb-fb4084eaaab3
+    m_ActionName: XRI RightHand/UI Press
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 962ac033-ec42-4981-88a4-551ad9be6ecb
+    m_ActionName: XRI RightHand/UI Press Value
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57b2a1b4-3290-46d6-ac07-4854ee8f91b1
+    m_ActionName: XRI RightHand/Haptic Device
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 02e43582-8973-4940-af06-dff6158e3df2
+    m_ActionName: XRI RightHand/Teleport Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
+    m_ActionName: XRI RightHand/Teleport Mode Activate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d587b60c-39a0-4365-8075-477ce484ba0f
+    m_ActionName: XRI RightHand/Teleport Mode Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9fb2eb2b-2fb6-4328-8167-10a1bf11b424
+    m_ActionName: XRI RightHand/Turn
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 00a4dc9f-1ee6-4349-b0e9-72d5dccaadd6
+    m_ActionName: XRI RightHand/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b5d8312-f609-4895-b70f-81a722b2ae11
+    m_ActionName: XRI RightHand/Rotate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f7cf253-7062-443b-b10f-2be48a33f027
+    m_ActionName: XRI RightHand/Translate Anchor
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 28c8af24-6b9f-4ebf-8c70-3cafd586aa73
+    m_ActionName: XRI RightHand/Trigger
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Generic XR Controller
+  m_DefaultActionMap: XRI HMD
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1633697173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,7 +4028,7 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -4033,7 +4039,7 @@ PrefabInstance:
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}

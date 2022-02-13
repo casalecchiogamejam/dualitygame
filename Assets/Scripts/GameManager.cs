@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,8 +27,13 @@ public class GameManager : MonoBehaviour
     public PlayerManager player;
     public WorldsManager worldsManager;
     public VolumeSwitcher volumeSwitcher;
+    [HideInInspector]
+    public bool gripLeftPressed = false;
+    [HideInInspector]
+    public bool gripRightPressed = false;
 
     private List<GameObject> allActiveObjs;
+
 
     private void Awake()
     {
@@ -58,5 +64,21 @@ public class GameManager : MonoBehaviour
         }
 
         return allActiveObjs;
+    }
+
+    public void OnGripLeftPressed(InputAction.CallbackContext context)
+    {
+        if(context.started)
+            gripLeftPressed = true;
+        else if(context.canceled)
+            gripLeftPressed = false;
+    }
+
+    public void OnGripRightPressed(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            gripRightPressed = true;
+        else if (context.canceled)
+            gripRightPressed = false;
     }
 }

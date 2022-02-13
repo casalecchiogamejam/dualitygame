@@ -9,11 +9,6 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] InputActionAsset inputActionAsset;
     private InputActionMap inputMap;
 
-    private void Start()
-    {
-
-    }
-
     private void OnEnable()
     {
         inputMap = inputActionAsset.FindActionMap(mapName);
