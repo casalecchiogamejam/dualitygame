@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class SoulManager : EnemyBaseManager
 {
-    [SerializeField] EnemyScriptableObject data;
-
-    private Vector3 moveDirection;
+    public EnemyScriptableObject data;
     public bool absorbed = false;
 
     void FixedUpdate()
@@ -25,9 +23,8 @@ public class SoulManager : EnemyBaseManager
 
     }
 
-    void OnTriggerExit(Collider other)
+    public void OnAbsorbFinished()
     {
-        if (other.gameObject.name == "SoulsResurrector")
-            GameManager.instance.soulsPool.DestroyObjectInstantiatedFromPool(gameObject, 0);
+        GameManager.instance.soulsPool.DestroyObjectInstantiatedFromPool(gameObject, 0);
     }
 }

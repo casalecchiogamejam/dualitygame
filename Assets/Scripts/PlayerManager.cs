@@ -34,6 +34,13 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("YOU DIED");
         }
+
+        if (collisionInfo.gameObject.CompareTag("Soul"))
+        {
+            SoulManager soul = collisionInfo.GetComponent<SoulManager>();
+            soul.OnAbsorbFinished();
+            OnSoulKilled(soul.data);
+        }
     }
 
     public void OnEnemyKilled(EnemyScriptableObject enemyData)

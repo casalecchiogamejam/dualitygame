@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ public class WeaponVacuum : Weapon
     [SerializeField] GameObject effectPrefab;
     private GameObject effect;
     private bool absorbing = false;
+    private List<SoulManager> absorbingSouls = new List<SoulManager>();
 
     public override int GetDamage()
     {
@@ -23,6 +25,9 @@ public class WeaponVacuum : Weapon
     {
         absorbing = false;
         Destroy(effect);
+        foreach (SoulManager soul in absorbingSouls)
+            soul.absorbed = false;
+        absorbingSouls.Clear();
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,6 +39,7 @@ public class WeaponVacuum : Weapon
         {
             SoulManager soulManager = other.GetComponent<SoulManager>();
             soulManager.absorbed = true;
+            absorbingSouls.Add(soulManager);
         }
     }
 
@@ -46,6 +52,7 @@ public class WeaponVacuum : Weapon
         {
             SoulManager soulManager = other.GetComponent<SoulManager>();
             soulManager.absorbed = false;
+            absorbingSouls.Remove(soulManager);
         }
     }
 }
