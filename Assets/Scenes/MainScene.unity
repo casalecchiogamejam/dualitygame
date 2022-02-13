@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 762.89185, g: 629.6145, b: 539.14374, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1523,6 +1523,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
+      propertyPath: spawnedEnemy
+      value: 
+      objectReference: {fileID: -3587436137041797425, guid: 29e132bb7731c4e4b9ff134698099181,
+        type: 3}
+    - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
+        type: 3}
       propertyPath: spawnDelaySeconds
       value: 8
       objectReference: {fileID: 0}
@@ -1992,6 +1998,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
+        type: 3}
+      propertyPath: spawnedEnemy
+      value: 
+      objectReference: {fileID: -3587436137041797425, guid: 29e132bb7731c4e4b9ff134698099181,
+        type: 3}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
@@ -2855,6 +2867,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
+        type: 3}
+      propertyPath: spawnedEnemy
+      value: 
+      objectReference: {fileID: -3587436137041797425, guid: 29e132bb7731c4e4b9ff134698099181,
+        type: 3}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
