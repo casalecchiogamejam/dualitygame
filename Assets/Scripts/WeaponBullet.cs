@@ -20,5 +20,10 @@ public class WeaponBullet : Weapon
         // TODO: fireRate implementation
         GameManager.instance.bulletsPool.GetElemFromPool(transform);
     }
+
+    public override void OnTriggerReleased(InputAction.CallbackContext context)
+    {
+        return;
+    }
 }
 

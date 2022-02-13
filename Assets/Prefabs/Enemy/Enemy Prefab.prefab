@@ -862,6 +862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e05b3c72e5a05e4e9c3675ae3322a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticles: {fileID: 1485358999964111014, guid: e6468fd230897714ab0a9569c2f352c8,
+    type: 3}
   data: {fileID: 11400000, guid: 6bef5fbacc2b59248b885917e0f44dc9, type: 2}
 --- !u!195 &8476213313582877004
 NavMeshAgent:

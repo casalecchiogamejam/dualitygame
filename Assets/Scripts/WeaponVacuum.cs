@@ -16,27 +16,29 @@ public class WeaponVacuum : Weapon
 
     public override void OnTriggerPressed(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
+        Debug.Log(context);
+
             Debug.Log("started");
 
             absorbing = true;
-            effect = GameObject.Instantiate(effectPrefab);
+            effect = Instantiate(effectPrefab);
             effect.transform.position = transform.position;
-        }
-        else if (context.canceled)
-        {
-            Debug.Log("ended");
+        
+    }
 
-            absorbing = false;
-            GameObject.Destroy(effect);
-        }
+    public override void OnTriggerReleased(InputAction.CallbackContext context)
+    {
+        Debug.Log("ended");
+
+        absorbing = false;
+        Destroy(effect);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Soul"))
         {
+            Debug.Log("diocane");
             SoulManager soulManager = other.GetComponent<SoulManager>();
             soulManager.absorbed = true;
         }
