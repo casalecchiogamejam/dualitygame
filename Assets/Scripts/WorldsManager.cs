@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WorldsManager : MonoBehaviour
 {
-    public Costants.Worlds currentWorld = Costants.Worlds.RealWorld;
+    public Constants.Worlds currentWorld = Constants.Worlds.RealWorld;
 
     public void ChangeWorld()
     {
-        if (currentWorld == Costants.Worlds.RealWorld)
-            currentWorld = Costants.Worlds.SoulsWorld;
+        if (currentWorld == Constants.Worlds.RealWorld)
+            currentWorld = Constants.Worlds.SoulsWorld;
         else
-            currentWorld = Costants.Worlds.RealWorld;
+            currentWorld = Constants.Worlds.RealWorld;
 
         // TODO: change world graphically
     }

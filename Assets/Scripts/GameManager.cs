@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GenericObjectPooling bulletPool;
     public GenericObjectPooling enemyPool;
     public PlayerManager player;
+    public WorldsManager worldsManager;
 
     private void Awake()
     {

@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
 
     public int level
     {
-        get { return experience / Costants.experienceToLevelUp; }
+        get { return experience / Constants.experienceToLevelUp; }
     }
 
     public int damageDone
