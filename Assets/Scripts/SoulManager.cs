@@ -21,7 +21,7 @@ public class SoulManager : EnemyBaseManager
             transform.position += moveDirection * data.speed * Time.deltaTime;
     }
 
-    void void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "SoulsResurrector")
         {
