@@ -47,9 +47,8 @@ public class EnemyManager : EnemyBaseManager
     private void OnDeath()
     {
         GameManager.instance.player.OnEnemyKilled(data);
-        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
-
-        // TODO: spawn enemy soul
+        StartCoroutine(GameManager.instance.enemiesPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
+        GameManager.instance.soulsPool.GetElemFromPool(transform);
     }
 
     private void OnGetDamage()

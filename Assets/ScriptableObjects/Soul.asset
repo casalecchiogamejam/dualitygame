@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038358538c24ac84699590611b27dddc, type: 3}
   m_Name: Soul
   m_EditorClassIdentifier: 
-  level: 0
-  life: 0
-  speed: 0
-  experience: 0
-  score: 0
+  level: 1
+  life: 1
+  speed: 0.5
+  experience: 1
+  score: 10

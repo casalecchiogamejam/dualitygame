@@ -8,17 +8,9 @@ public class SoulManager : EnemyBaseManager
 
     private Vector3 moveDirection;
 
-    void Start()
-    {
-        Vector3 playerPosition = GameManager.instance.player.transform.position;
-        Vector3 distanceFromPlayer = playerPosition - transform.position;
-        moveDirection = -distanceFromPlayer.normalized;
-    }
-
     void FixedUpdate()
     {
-        if (moveDirection != Vector3.zero)
-            transform.position += moveDirection * data.speed * Time.deltaTime;
+        transform.position += Vector3.up * data.speed * Time.deltaTime;
     }
 
     void OnTriggerExit(Collider other)

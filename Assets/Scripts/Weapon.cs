@@ -27,14 +27,14 @@ public class Weapon : MonoBehaviour
     public void OnTriggerPressed(CallbackContext context)
     {
         // TODO: fireRate implementation
-        GameManager.instance.bulletPool.GetElemFromPool(transform);
+        GameManager.instance.bulletsPool.GetElemFromPool(transform);
     }
 
     private void Update()
     {
         #if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.Space))
-            GameManager.instance.bulletPool.GetElemFromPool(transform);
+            GameManager.instance.bulletsPool.GetElemFromPool(transform);
 #endif
     }
 }
