@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyManager : EnemyBaseManager
 {
-    [SerializeField] TMP_Text lifeText;
     public EnemyScriptableObject data;
     private NavMeshAgent agent;
     private int currentLife;
@@ -28,22 +27,11 @@ public class EnemyManager : EnemyBaseManager
 
         agent.speed = data.speed;
         currentLife = data.life;
-        UpdateLifeBar();
-    }
-
-    void Update()
-    {
-        lifeText.gameObject.transform.LookAt(GameManager.instance.player.transform, GameManager.instance.player.transform.up);
     }
 
     public void OnBulletHit()
     {
         GetDamage(GameManager.instance.player.damageDone);
-    }
-
-    private void UpdateLifeBar()
-    {
-        lifeText.text = currentLife.ToString();
     }
 
     private void GetDamage(int damage)
@@ -67,6 +55,5 @@ public class EnemyManager : EnemyBaseManager
     private void OnGetDamage()
     {
         // TODO: animate damage?!
-        UpdateLifeBar();
     }
 }
