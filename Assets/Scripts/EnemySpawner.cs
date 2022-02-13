@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public EnemyManager spawnedEnemy;
+    public EnemyBaseManager spawnedEnemy;
 
+    public float extraSpawnDelaySeconds;
     public float spawnDelaySeconds;
+
+    public int extraEnemiesToSpawn = 0;
 
     void Start()
     {
@@ -17,6 +20,13 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
+            if (extraEnemiesToSpawn > 0)
+            {
+                extraEnemiesToSpawn--;
+                GameManager.instance.enemyPool.GetElemFromPool(transform);
+                yield return new WaitForSeconds(extraSpawnDelaySeconds);
+            }
+
             GameManager.instance.enemyPool.GetElemFromPool(transform);
             yield return new WaitForSecondsRealtime(spawnDelaySeconds);
         }

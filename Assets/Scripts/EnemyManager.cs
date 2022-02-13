@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : EnemyBaseManager
 {
     [SerializeField] TMP_Text lifeText;
     public EnemyScriptableObject data;
@@ -20,7 +20,7 @@ public class EnemyManager : MonoBehaviour
 
     void OnEnable()
     {
-        if(!destinationNavMeshSet && agent.isOnNavMesh)
+        if (!destinationNavMeshSet && agent.isOnNavMesh)
         {
             agent.destination = GameManager.instance.player.transform.position;
             destinationNavMeshSet = true;
@@ -48,16 +48,25 @@ public class EnemyManager : MonoBehaviour
 
     private void GetDamage(int damage)
     {
+        Debug.Log(gameObject.name + " get damage " + damage);
         currentLife -= GameManager.instance.player.damageDone;
         if (currentLife <= 0)
-        {
-            GameManager.instance.player.OnEnemyKilled(data);
-            StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
-        }
+            OnDeath();
         else
-        {
-            // TODO: animate damage?!
-            UpdateLifeBar();
-        }
+            OnGetDamage();
+    }
+
+    private void OnDeath()
+    {
+        GameManager.instance.player.OnEnemyKilled(data);
+        StartCoroutine(GameManager.instance.enemyPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
+
+        // TODO: spawn enemy soul
+    }
+
+    private void OnGetDamage()
+    {
+        // TODO: animate damage?!
+        UpdateLifeBar();
     }
 }

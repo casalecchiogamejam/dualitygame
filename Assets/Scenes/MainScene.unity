@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 65550233}
   - component: {fileID: 65550234}
   - component: {fileID: 65550235}
+  - component: {fileID: 65550236}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -853,11 +854,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65550227}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5025
-  m_Center: {x: -36.98, y: 2.1999998, z: -7.8700023}
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &65550235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,6 +872,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectTime: 3
+--- !u!54 &65550236
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65550227}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &132301658
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +899,7 @@ GameObject:
   - component: {fileID: 132301660}
   - component: {fileID: 132301659}
   m_Layer: 0
-  m_Name: Bullet Pool
+  m_Name: Bullets Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,13 +927,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132301658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1536892413}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209504802
 GameObject:
@@ -1451,8 +1468,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5025
-  m_Center: {x: -36.98, y: 2.1999998, z: -7.8700023}
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &222507632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1502,7 @@ Transform:
   - {fileID: 537839233}
   - {fileID: 242879542}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &227657064
 PrefabInstance:
@@ -1502,12 +1519,12 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -1622,9 +1639,9 @@ MonoBehaviour:
   triggerActionName: Trigger
   inputActionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  bulletSpeed: 0
-  bulletDamage: 0
-  fireRate: 0
+  bulletSpeed: 2
+  bulletDamage: 1
+  fireRate: 1
 --- !u!1 &322813830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,7 +1684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404171418
 GameObject:
@@ -1978,7 +1995,7 @@ PrefabInstance:
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -2117,6 +2134,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 554268089}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &617820775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617820776}
+  - component: {fileID: 617820777}
+  m_Layer: 0
+  m_Name: Souls Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617820776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617820775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1536892413}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617820777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617820775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0472ce3dea6f9694fb393775b73d75ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numToInstantiate: 10
+  prefabToInstantiate: {fileID: 5952707782763968064, guid: 1d50a8dd359c44f4e86a19760f84e73c,
+    type: 3}
 --- !u!1 &694250834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2484,7 @@ Transform:
   - {fileID: 1487149343}
   - {fileID: 554268090}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1487149342
 PrefabInstance:
@@ -2547,6 +2611,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWorld: 0
+--- !u!1 &1536892412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536892413}
+  m_Layer: 0
+  m_Name: Pools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1536892413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536892412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1661105454}
+  - {fileID: 132301660}
+  - {fileID: 617820776}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600688525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,7 +2697,7 @@ Transform:
   m_Children:
   - {fileID: 1826422698}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1600688528
 MonoBehaviour:
@@ -2670,7 +2768,7 @@ GameObject:
   - component: {fileID: 1661105454}
   - component: {fileID: 1661105453}
   m_Layer: 0
-  m_Name: Enemy Pool
+  m_Name: Enemies Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2698,13 +2796,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661105452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1536892413}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826422697
 GameObject:
@@ -2755,12 +2853,12 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}

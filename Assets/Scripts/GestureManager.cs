@@ -5,11 +5,11 @@ using UnityEngine;
 public class GestureManager : MonoBehaviour
 {
     public float detectTime;
-    
+
     private float collisionTime = 0;
     private bool gestureDone = false;
 
-    void OnCollisionStay(Collision collisionInfo)
+    void OnTriggerStay(Collider other)
     {
         if (gestureDone)
             return;
@@ -20,12 +20,13 @@ public class GestureManager : MonoBehaviour
         {
             GameManager.instance.worldsManager.ChangeWorld();
             gestureDone = true;
+            collisionTime = 0;
         }
     }
 
-    void OnCollisionExit(Collision collisionInfo)
+    void OnTriggerExit(Collider other)
     {
-        if (collisionInfo.gameObject.name == "RightHand Controller")
+        if (other.gameObject.name == "RightHand Controller")
         {
             collisionTime = 0;
             gestureDone = false;
