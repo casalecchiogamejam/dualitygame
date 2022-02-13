@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletManager : MonoBehaviour
 {
+    public Rigidbody rb;
     public float secondsToWaitBeforeDestroy;
     public float speed;
 
@@ -15,7 +16,7 @@ public class BulletManager : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        rb.AddForce(transform.forward * speed);
     }
 
     void OnTriggerEnter(Collider collisionInfo)
@@ -36,6 +37,7 @@ public class BulletManager : MonoBehaviour
 
     void DestroyObjectAfter(float seconds)
     {
+        rb.velocity = Vector3.zero;
         StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, seconds));
     }
 

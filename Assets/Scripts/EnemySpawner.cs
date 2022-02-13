@@ -17,8 +17,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            GameObject newEnemy = GameManager.instance.enemyPool.GetElemFromPoolOrInstantiate();
-            newEnemy.transform.position = transform.position;
+            GameObject newEnemy = GameManager.instance.enemyPool.GetElemFromPool(transform);
             yield return new WaitForSecondsRealtime(spawnDelaySeconds);
         }
     }

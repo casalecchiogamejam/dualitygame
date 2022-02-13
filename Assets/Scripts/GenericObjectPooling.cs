@@ -25,19 +25,22 @@ public class GenericObjectPooling : MonoBehaviour
         }
     }
 
-    public GameObject GetElemFromPoolOrInstantiate()
+    public GameObject GetElemFromPool(Transform posRotToInstantiate)
     {
         if(inactivePoolObjs.Count > 0)
         {
             GameObject toEnableGO = inactivePoolObjs[0];
-            toEnableGO.SetActive(true);
+            toEnableGO.transform.position = posRotToInstantiate.position;
+            toEnableGO.transform.rotation = posRotToInstantiate.rotation;
             inactivePoolObjs.Remove(toEnableGO);
+            toEnableGO.SetActive(true);
             return toEnableGO;
         }
         else
         {
-            GameObject toInstantiate = Instantiate(prefabToInstantiate);
-            toInstantiate.transform.SetParent(gameObject.transform, worldPositionStays: false);
+            GameObject toInstantiate = Instantiate(prefabToInstantiate, gameObject.transform);
+            toInstantiate.transform.position = posRotToInstantiate.position;
+            toInstantiate.transform.rotation = posRotToInstantiate.rotation;
             toInstantiate.SetActive(true);
             return toInstantiate;
         }

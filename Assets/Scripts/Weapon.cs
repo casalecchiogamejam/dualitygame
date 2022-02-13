@@ -22,8 +22,14 @@ public class Weapon : MonoBehaviour
 
     public void OnTriggerPressed(CallbackContext context)
     {
-        GameObject newBullet = GameManager.instance.bulletPool.GetElemFromPoolOrInstantiate();
-        newBullet.transform.position = transform.position;
-        newBullet.transform.rotation = transform.rotation;
+        GameManager.instance.bulletPool.GetElemFromPool(transform);
+    }
+
+    private void Update()
+    {
+        #if UNITY_EDITOR
+        if(Input.GetKeyDown(KeyCode.Space))
+            GameManager.instance.bulletPool.GetElemFromPool(transform);
+#endif
     }
 }
