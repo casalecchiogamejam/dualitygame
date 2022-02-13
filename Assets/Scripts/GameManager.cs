@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public GenericObjectPooling bulletPool;
-    public GenericObjectPooling enemyPool;
+    public GenericObjectPooling bulletsPool;
+    public GenericObjectPooling enemiesPool;
+    public GenericObjectPooling soulsPool;
     public PlayerManager player;
     public WorldsManager worldsManager;
 
@@ -32,7 +33,8 @@ public class GameManager : MonoBehaviour
             _instance = GetComponent<GameManager>();
         }
 
-        bulletPool.CreateNewPoolList();
-        enemyPool.CreateNewPoolList();
+        bulletsPool.CreateNewPoolList();
+        enemiesPool.CreateNewPoolList();
+        soulsPool.CreateNewPoolList();
     }
 }

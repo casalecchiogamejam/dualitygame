@@ -23,11 +23,11 @@ public class EnemySpawner : MonoBehaviour
             if (extraEnemiesToSpawn > 0)
             {
                 extraEnemiesToSpawn--;
-                GameManager.instance.enemyPool.GetElemFromPool(transform);
+                GameManager.instance.enemiesPool.GetElemFromPool(transform);
                 yield return new WaitForSeconds(extraSpawnDelaySeconds);
             }
 
-            GameManager.instance.enemyPool.GetElemFromPool(transform);
+            GameManager.instance.enemiesPool.GetElemFromPool(transform);
             yield return new WaitForSecondsRealtime(spawnDelaySeconds);
         }
     }
