@@ -37,6 +37,7 @@ public class PlayerManager : MonoBehaviour
 
         if (collisionInfo.gameObject.CompareTag("Soul"))
         {
+            Debug.Log("OOOOOOOOOOOOO");
             SoulManager soul = collisionInfo.GetComponent<SoulManager>();
             soul.OnAbsorbFinished();
             OnSoulKilled(soul.data);

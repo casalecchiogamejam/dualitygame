@@ -25,6 +25,6 @@ public class SoulManager : EnemyBaseManager
 
     public void OnAbsorbFinished()
     {
-        GameManager.instance.soulsPool.DestroyObjectInstantiatedFromPool(gameObject, 0);
+        StartCoroutine(GameManager.instance.soulsPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
     }
 }

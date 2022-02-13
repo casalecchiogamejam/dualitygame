@@ -30,7 +30,7 @@ public class WeaponVacuum : Weapon
         absorbingSouls.Clear();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (!absorbing)
             return;
