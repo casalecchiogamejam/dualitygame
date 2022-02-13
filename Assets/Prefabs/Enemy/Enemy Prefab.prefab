@@ -826,7 +826,7 @@ GameObject:
   - component: {fileID: 6091276662246167433}
   - component: {fileID: -3587436137041797425}
   - component: {fileID: 8476213313582877004}
-  - component: {fileID: 1347946934189260522}
+  - component: {fileID: 3737619309537671635}
   m_Layer: 0
   m_Name: Enemy Prefab
   m_TagString: Enemy
@@ -887,8 +887,8 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!135 &1347946934189260522
-SphereCollider:
+--- !u!65 &3737619309537671635
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -898,8 +898,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.69
-  m_Center: {x: 0, y: 0.69, z: 0}
+  m_Size: {x: 0.5, y: 1.06, z: 0.95}
+  m_Center: {x: 0, y: 0.81, z: -0.11}
 --- !u!1 &6256561499119522987
 GameObject:
   m_ObjectHideFlags: 0

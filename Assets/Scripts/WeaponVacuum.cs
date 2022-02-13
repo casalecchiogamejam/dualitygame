@@ -32,7 +32,6 @@ public class WeaponVacuum : Weapon
 
         if (other.CompareTag("Soul"))
         {
-            Debug.Log("diocane");
             SoulManager soulManager = other.GetComponent<SoulManager>();
             soulManager.absorbed = true;
         }
