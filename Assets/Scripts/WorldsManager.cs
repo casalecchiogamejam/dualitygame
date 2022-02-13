@@ -5,6 +5,9 @@ using UnityEngine;
 public class WorldsManager : MonoBehaviour
 {
     public Constants.Worlds currentWorld = Constants.Worlds.RealWorld;
+    [SerializeField] GameObject sphereAlive;
+    [SerializeField] GameObject sphereDead;
+
 
     public void ChangeWorld()
     {
@@ -14,6 +17,7 @@ public class WorldsManager : MonoBehaviour
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.soulsPool).ForEach(soul => soul.layer = LayerMask.NameToLayer("Default"));
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemiesPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("No Hit"));
             GameManager.instance.volumeSwitcher.SetVolume(0);
+            Instantiate(sphereAlive);
         }
         else
         {
@@ -21,8 +25,8 @@ public class WorldsManager : MonoBehaviour
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.soulsPool).ForEach(soul => soul.layer = LayerMask.NameToLayer("No Hit"));
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemiesPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("Default"));
             GameManager.instance.volumeSwitcher.SetVolume(1);
+            Instantiate(sphereDead);
         }
-
-        // TODO: change world graphically
+        Debug.Log("changing world to " + currentWorld);
     }
 }

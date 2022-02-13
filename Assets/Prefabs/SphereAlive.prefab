@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 80178855235588395}
   - component: {fileID: 2808044359251944929}
   - component: {fileID: 3547069411873716504}
-  - component: {fileID: 3547069411873716583}
+  - component: {fileID: 3080383282640110983}
   m_Layer: 0
   m_Name: SphereAlive
   m_TagString: Untagged
@@ -105,7 +105,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3547069411873716583
+--- !u!114 &3080383282640110983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,10 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4465548861291611188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0e231f2471a1794d91ab90feb1c9875, type: 3}
+  m_Script: {fileID: 11500000, guid: fa6c85a00396d8b40b4e248bf68af51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumesPrefab:
-  - {fileID: 7342315816816446208, guid: 4e769884e7be14e47899dbf23d0c4b09, type: 3}
-  - {fileID: 918085887264070656, guid: 8463dc4bd7d9f8042ba060c2d33c8646, type: 3}
-  defaultVolume: 0
+  lifetime: 5
