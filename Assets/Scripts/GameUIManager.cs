@@ -1,24 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameUIManager : MonoBehaviour
 {
-    public GameObject levelText;
-    public GameObject scoreText;
-    public GameObject experienceSlider;
+    public TMP_Text levelText;
+    public TMP_Text scoreText;
+    public Slider experienceSlider;
 
     private void Update()
     {
         PlayerManager player = GameManager.instance.player;
 
-        if(player != null)
+        if (player != null)
         {
-            levelText.GetComponent<TextMesh>().text = player.experience.ToString();
-            scoreText.GetComponent<TextMesh>().text = player.level.ToString();
-            experienceSlider.GetComponent<Slider>().value = player.score;
+            levelText.text = player.experience.ToString();
+            scoreText.text = player.level.ToString();
+            experienceSlider.value = player.score;
         }
     }
-
 }
