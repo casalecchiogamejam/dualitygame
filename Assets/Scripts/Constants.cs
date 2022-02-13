@@ -10,5 +10,5 @@ public static class Constants
         RealWorld,
         SoulsWorld
     }
-    public static int experienceToLevelUp;
+    public static int experienceToLevelUp = 100;
 }

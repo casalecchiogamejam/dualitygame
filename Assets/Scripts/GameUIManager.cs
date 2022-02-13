@@ -14,9 +14,9 @@ public class GameUIManager : MonoBehaviour
 
         if (player != null)
         {
-            levelText.text = player.experience.ToString();
-            scoreText.text = player.level.ToString();
-            experienceSlider.value = player.score;
+            levelText.text = player.level.ToString();
+            scoreText.text = player.score.ToString();
+            experienceSlider.value = player.experience;
         }
     }
 }
