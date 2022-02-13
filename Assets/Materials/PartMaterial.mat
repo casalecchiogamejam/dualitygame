@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 2e7dc623f26e0ab4fa62f4de64d7bb04, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -62,7 +62,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _OpaqueCullMode: 2
-    - _PresenceFactor: 1.39
+    - _PresenceFactor: 1
     - _RenderQueueType: 4
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -89,7 +89,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0}
+    - _Color: {r: 0.26539695, g: 0.7924528, b: 0.7924528, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
