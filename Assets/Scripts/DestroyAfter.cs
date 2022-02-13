@@ -13,4 +13,6 @@ public class DestroyAfter : MonoBehaviour
         if (lifetime < 0f)      
             Destroy(gameObject);
     }
+
+    public void ImPublic() {}
 }

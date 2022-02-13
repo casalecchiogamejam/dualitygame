@@ -2,17 +2,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField] BulletManager bulletPrefab;
     [SerializeField] string mapName;
     [SerializeField] string triggerActionName;
     [SerializeField] InputActionAsset inputActionAsset;
     private InputActionMap inputMap;
-
-    public float bulletSpeed;
-    public int bulletDamage;
-    public float fireRate;
 
     private void Start()
     {
@@ -24,16 +19,13 @@ public class Weapon : MonoBehaviour
             inputAction.started += OnTriggerPressed;
     }
 
-    public void OnTriggerPressed(CallbackContext context)
-    {
-        // TODO: fireRate implementation
-        GameManager.instance.bulletsPool.GetElemFromPool(transform);
-    }
+    public abstract void OnTriggerPressed(CallbackContext context);
+    public abstract int GetDamage();
 
     private void Update()
     {
-        #if UNITY_EDITOR
-        if(Input.GetKeyDown(KeyCode.Space))
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Space))
             GameManager.instance.bulletsPool.GetElemFromPool(transform);
 #endif
     }

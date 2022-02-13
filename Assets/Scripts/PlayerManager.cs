@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
 
     public int damageDone
     {
-        get { return equippedWeapon.bulletDamage; }
+        get { return equippedWeapon.GetDamage(); }
     }
 
     public void OnEnemyKilled(EnemyScriptableObject enemyData)

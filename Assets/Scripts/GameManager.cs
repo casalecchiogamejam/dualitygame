@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GenericObjectPooling soulsPool;
     public PlayerManager player;
     public WorldsManager worldsManager;
+    public VolumeSwitcher volumeSwitcher;
 
     private List<GameObject> allActiveObjs;
 
