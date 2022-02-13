@@ -14,9 +14,11 @@ public class BulletManager : MonoBehaviour
         DestroyObjectAfter(secondsToWaitBeforeDestroy);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed);
+        rb.velocity = transform.forward * speed;
+        //rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+        Debug.Log("velocity: " + rb.velocity);
     }
 
     void OnTriggerEnter(Collider collisionInfo)

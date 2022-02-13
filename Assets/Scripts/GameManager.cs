@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         {
             _instance = GetComponent<GameManager>();
         }
+
+        Application.targetFrameRate = 120;
     }
 
 
