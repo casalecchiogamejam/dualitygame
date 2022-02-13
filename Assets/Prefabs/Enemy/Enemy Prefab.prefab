@@ -488,7 +488,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -980,7 +980,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1570,7 +1570,7 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: a2861c166f2f06b40a1674408e1f60e0, type: 2}
   - {fileID: 2100000, guid: c3e3405eafe28d7489e4acfc05843524, type: 2}
-  - {fileID: 2100000, guid: b69cf680c61f53843bcc2d8fb910d65a, type: 2}
+  - {fileID: 2100000, guid: 611756a826748864f9c7a59dfb11f85e, type: 2}
   - {fileID: 2100000, guid: a2861c166f2f06b40a1674408e1f60e0, type: 2}
   - {fileID: 2100000, guid: 40780b2d28753e74b99e4ea4b8435f3f, type: 2}
   m_StaticBatchInfo:
