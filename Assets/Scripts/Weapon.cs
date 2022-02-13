@@ -10,6 +10,10 @@ public class Weapon : MonoBehaviour
     [SerializeField] InputActionAsset inputActionAsset;
     private InputActionMap inputMap;
 
+    public float bulletSpeed;
+    public int bulletDamage;
+    public float fireRate;
+
     private void Start()
     {
         inputMap = inputActionAsset.FindActionMap(mapName);
@@ -22,6 +26,7 @@ public class Weapon : MonoBehaviour
 
     public void OnTriggerPressed(CallbackContext context)
     {
+        // TODO: fireRate implementation
         GameManager.instance.bulletPool.GetElemFromPool(transform);
     }
 

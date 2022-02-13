@@ -7,31 +7,35 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerManager : MonoBehaviour
 {
-    public int experienceToLevelUp;
-
     public int experience;
-
     public int score;
+    public Weapon equippedWeapon;
 
     public int level
     {
-        get { return experience / experienceToLevelUp; }
+        get { return experience / Costants.experienceToLevelUp; }
     }
 
-    void OnTriggerEnter(Collider collisionInfo)
+    public int damageDone
     {
-        if (collisionInfo.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("YOU DIED");
-            Destroy(gameObject);
-        }
+        get { return equippedWeapon.bulletDamage; }
     }
 
     public void OnEnemyKilled(EnemyScriptableObject enemyData)
     {
-        experience += enemyData.experience;
         score += enemyData.score;
     }
 
+    public void OnSoulKilled(EnemyScriptableObject soulData)
+    {
+        experience += soulData.experience;
+    }
 
+    public void OnTriggerEnter(Collider collisionInfo)
+    {
+        if (collisionInfo.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("YOU DIED");
+        }
+    }
 }

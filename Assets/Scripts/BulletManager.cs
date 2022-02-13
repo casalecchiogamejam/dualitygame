@@ -8,7 +8,6 @@ public class BulletManager : MonoBehaviour
     public float secondsToWaitBeforeDestroy;
     public float speed;
 
-
     void OnEnable()
     {
         DestroyObjectAfter(secondsToWaitBeforeDestroy);
@@ -23,7 +22,7 @@ public class BulletManager : MonoBehaviour
     {
         if (collisionInfo.gameObject.CompareTag("Enemy"))
         {
-            EnemyManager enemy = collisionInfo.gameObject.GetComponentInParent<EnemyManager>();
+            EnemyManager enemy = collisionInfo.gameObject.GetComponent<EnemyManager>();
 
             if (enemy == null)
                 Debug.LogWarning("missing EnemyManager component from " + collisionInfo.gameObject.name);
