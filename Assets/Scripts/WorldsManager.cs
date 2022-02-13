@@ -18,6 +18,7 @@ public class WorldsManager : MonoBehaviour
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemiesPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("No Hit"));
             GameManager.instance.volumeSwitcher.SetVolume(0);
             Instantiate(sphereAlive);
+            GameManager.instance.player.SwitchWeapon();
         }
         else
         {
@@ -26,7 +27,7 @@ public class WorldsManager : MonoBehaviour
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemiesPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("Default"));
             GameManager.instance.volumeSwitcher.SetVolume(1);
             Instantiate(sphereDead);
+            GameManager.instance.player.SwitchWeapon();
         }
-        Debug.Log("changing world to " + currentWorld);
     }
 }

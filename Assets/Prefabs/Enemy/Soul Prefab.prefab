@@ -525,9 +525,9 @@ GameObject:
   - component: {fileID: 6091276662246167433}
   - component: {fileID: 1347946934189260522}
   - component: {fileID: 1190339322767878537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Soul Prefab
-  m_TagString: Untagged
+  m_TagString: Soul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,6 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 32a39ec3f2ecaa4468a7a78a72b0c379, type: 2}
+  absorbed: 0
 --- !u!1 &6256561499119522987
 GameObject:
   m_ObjectHideFlags: 0

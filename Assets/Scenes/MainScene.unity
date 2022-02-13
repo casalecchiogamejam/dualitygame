@@ -135,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20898111}
   - component: {fileID: 20898112}
+  - component: {fileID: 20898113}
   m_Layer: 0
   m_Name: WeaponVacuumLeft
   m_TagString: Untagged
@@ -173,6 +174,22 @@ MonoBehaviour:
   triggerActionName: Trigger
   inputActionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  effectPrefab: {fileID: 6568097286417980037, guid: f320e39cec26a1047af1b7ba01faf09e,
+    type: 3}
+--- !u!136 &20898113
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20898110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 100
+  m_Direction: 1
+  m_Center: {x: 0, y: 50, z: 0}
 --- !u!1 &65550227
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +907,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 28c8af24-6b9f-4ebf-8c70-3cafd586aa73
     m_ActionName: XRI RightHand/Trigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dcc1936a-cecd-4e79-8600-c49bf1f4d566
+    m_ActionName: XRI LeftHand/Grip
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7006862d-3495-492d-a830-7bbb0c4b8e4c
+    m_ActionName: XRI RightHand/Grip
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Generic XR Controller
   m_DefaultActionMap: XRI LeftHand
@@ -3196,6 +3221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358253554}
   - component: {fileID: 1358253555}
+  - component: {fileID: 1358253556}
   m_Layer: 0
   m_Name: WeaponVacuumRight
   m_TagString: Untagged
@@ -3234,6 +3260,22 @@ MonoBehaviour:
   triggerActionName: Trigger
   inputActionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  effectPrefab: {fileID: 6568097286417980037, guid: f320e39cec26a1047af1b7ba01faf09e,
+    type: 3}
+--- !u!136 &1358253556
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358253553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 100
+  m_Direction: 1
+  m_Center: {x: 0, y: 50, z: 0}
 --- !u!1 &1416844696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3651,6 +3693,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d591f1eb9cfd805468849cf3f703a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponBulletLEFT: {fileID: 306795339}
+  weaponBulletRIGHT: {fileID: 2096759151}
+  weaponVacuumLEFT: {fileID: 20898112}
+  weaponVacuumRIGHT: {fileID: 1358253555}
   experience: 0
   score: 0
   equippedWeapon: {fileID: 306795339}

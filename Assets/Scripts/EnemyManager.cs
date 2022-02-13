@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyManager : EnemyBaseManager
 {
+    [SerializeField] GameObject deathParticles;
     public EnemyScriptableObject data;
     private NavMeshAgent agent;
     private int currentLife;
@@ -49,6 +50,8 @@ public class EnemyManager : EnemyBaseManager
         GameManager.instance.player.OnEnemyKilled(data);
         StartCoroutine(GameManager.instance.enemiesPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
         GameManager.instance.soulsPool.GetElemFromPool(transform);
+        GameObject particles = GameObject.Instantiate(deathParticles);
+        particles.transform.position = transform.position;
     }
 
     private void OnGetDamage()

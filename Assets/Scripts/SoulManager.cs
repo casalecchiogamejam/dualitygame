@@ -7,18 +7,27 @@ public class SoulManager : EnemyBaseManager
     [SerializeField] EnemyScriptableObject data;
 
     private Vector3 moveDirection;
+    public bool absorbed = false;
 
     void FixedUpdate()
     {
-        transform.position += Vector3.up * data.speed * Time.deltaTime;
+        if (absorbed)
+        {
+            Vector3 playerPosition = GameManager.instance.player.transform.position;
+            Vector3 absorbingDirection = -(transform.position - playerPosition).normalized;
+
+            transform.position += absorbingDirection * data.speed * 5 * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += Vector3.up * data.speed * Time.deltaTime;
+        }
+
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "SoulsResurrector")
-        {
-            //TODO: respawn soul as an enemy
-            Debug.Log("RESURRECT ENEMY");
-        }
+            GameManager.instance.soulsPool.DestroyObjectInstantiatedFromPool(gameObject, 0);
     }
 }
