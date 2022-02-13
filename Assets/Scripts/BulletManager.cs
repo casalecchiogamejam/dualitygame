@@ -36,8 +36,11 @@ public class BulletManager : MonoBehaviour
 
     void DestroyObjectAfter(float seconds)
     {
-        rb.velocity = Vector3.zero;
-        StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, seconds));
+        if(GameManager.instance.bulletPool != null)
+        {
+            rb.velocity = Vector3.zero;
+            StartCoroutine(GameManager.instance.bulletPool.DestroyObjectInstantiatedFromPool(gameObject, seconds));
+        }
     }
 
 }

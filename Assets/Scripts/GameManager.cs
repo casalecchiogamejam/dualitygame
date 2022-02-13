@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
             if (_instance == null)
             {
                 GameObject go = new GameObject("GameManager");
-                _instance = go.AddComponent<GameManager>();;
+                _instance = go.AddComponent<GameManager>();
             }
             return _instance;
         }
@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
         {
             _instance = GetComponent<GameManager>();
         }
+
+        bulletPool.CreateNewPoolList();
+        enemyPool.CreateNewPoolList();
     }
-
-
-    //TODO creare input system per gestione eventi sui tasti dei controller
 }

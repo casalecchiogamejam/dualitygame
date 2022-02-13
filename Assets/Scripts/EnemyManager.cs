@@ -10,16 +10,22 @@ public class EnemyManager : MonoBehaviour
     public EnemyScriptableObject data;
     private NavMeshAgent agent;
     private int currentLife;
-
+    private bool destinationNavMeshSet;
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.destination = GameManager.instance.player.transform.position;
+        destinationNavMeshSet = false;
     }
 
     void OnEnable()
     {
+        if(!destinationNavMeshSet && agent.isOnNavMesh)
+        {
+            agent.destination = GameManager.instance.player.transform.position;
+            destinationNavMeshSet = true;
+        }
+
         agent.speed = data.speed;
         currentLife = data.life;
         UpdateLifeBar();

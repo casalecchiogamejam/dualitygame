@@ -9,25 +9,21 @@ public class GenericObjectPooling : MonoBehaviour
     public GameObject prefabToInstantiate;
     private List<GameObject> inactivePoolObjs;
 
-    private void Awake()
-    {
-        CreateNewPoolList();
-    }
-
-    private void CreateNewPoolList()
+    public void CreateNewPoolList()
     {
         inactivePoolObjs = new List<GameObject>();
         for (int i = 0; i < numToInstantiate; i++)
         {
             GameObject newPooledObj = Instantiate(prefabToInstantiate);
             newPooledObj.transform.SetParent(gameObject.transform);
+            newPooledObj.SetActive(false);
             inactivePoolObjs.Add(newPooledObj);
         }
     }
 
     public GameObject GetElemFromPool(Transform posRotToInstantiate)
     {
-        if(inactivePoolObjs.Count > 0)
+        if (inactivePoolObjs.Count > 0)
         {
             GameObject toEnableGO = inactivePoolObjs[0];
             toEnableGO.transform.position = posRotToInstantiate.position;
