@@ -488,7 +488,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -862,7 +862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e05b3c72e5a05e4e9c3675ae3322a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeText: {fileID: 0}
   data: {fileID: 11400000, guid: 6bef5fbacc2b59248b885917e0f44dc9, type: 2}
 --- !u!195 &8476213313582877004
 NavMeshAgent:
@@ -981,7 +980,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1571,6 +1570,9 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: a2861c166f2f06b40a1674408e1f60e0, type: 2}
   - {fileID: 2100000, guid: c3e3405eafe28d7489e4acfc05843524, type: 2}
+  - {fileID: 2100000, guid: b69cf680c61f53843bcc2d8fb910d65a, type: 2}
+  - {fileID: 2100000, guid: a2861c166f2f06b40a1674408e1f60e0, type: 2}
+  - {fileID: 2100000, guid: 40780b2d28753e74b99e4ea4b8435f3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
