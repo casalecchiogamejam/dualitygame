@@ -12,13 +12,13 @@ public class WorldsManager : MonoBehaviour
         {
             currentWorld = Constants.Worlds.SoulsWorld;
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.soulsPool).ForEach(soul => soul.layer = LayerMask.NameToLayer("Default"));
-            GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemyPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("No Hit"));
+            GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemiesPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("No Hit"));
         }
         else
         {
             currentWorld = Constants.Worlds.RealWorld;
             GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.soulsPool).ForEach(soul => soul.layer = LayerMask.NameToLayer("No Hit"));
-            GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemyPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("Default"));
+            GameManager.instance.GetAllActiveChildrenOfPool(GameManager.instance.enemiesPool).ForEach(enemy => enemy.layer = LayerMask.NameToLayer("Default"));
         }
 
         // TODO: change world graphically
