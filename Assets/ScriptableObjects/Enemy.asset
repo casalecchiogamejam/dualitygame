@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   life: 1
-  speed: 2
-  experience: 1
+  movingSpeed: 2
   score: 10

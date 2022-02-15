@@ -17,8 +17,7 @@ public class WeaponVacuum : Weapon
     public override void OnTriggerPressed(InputAction.CallbackContext context)
     {
         absorbing = true;
-        effect = Instantiate(effectPrefab);
-        effect.transform.position = transform.position;
+        effect = Instantiate(effectPrefab, transform);
     }
 
     public override void OnTriggerReleased(InputAction.CallbackContext context)

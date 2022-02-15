@@ -7,10 +7,10 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] public Weapon weaponBulletLEFT;
-    [SerializeField] public Weapon weaponBulletRIGHT;
-    [SerializeField] public Weapon weaponVacuumLEFT;
-    [SerializeField] public Weapon weaponVacuumRIGHT;
+    [SerializeField] Weapon weaponBulletLEFT;
+    [SerializeField] Weapon weaponBulletRIGHT;
+    [SerializeField] Weapon weaponVacuumLEFT;
+    [SerializeField] Weapon weaponVacuumRIGHT;
 
     public int experience;
     public int score;
@@ -27,6 +27,11 @@ public class PlayerManager : MonoBehaviour
         get { return equippedWeapon.GetDamage(); }
     }
 
+    public float experiencePercent
+    {
+        get { return (float)experience / (float)Constants.experienceToLevelUp; }
+    }
+
 
     public void OnTriggerEnter(Collider collisionInfo)
     {
@@ -37,7 +42,6 @@ public class PlayerManager : MonoBehaviour
 
         if (collisionInfo.gameObject.CompareTag("Soul"))
         {
-            Debug.Log("OOOOOOOOOOOOO");
             SoulManager soul = collisionInfo.GetComponent<SoulManager>();
             soul.OnAbsorbFinished();
             OnSoulKilled(soul.data);
@@ -49,7 +53,7 @@ public class PlayerManager : MonoBehaviour
         score += enemyData.score;
     }
 
-    public void OnSoulKilled(EnemyScriptableObject soulData)
+    public void OnSoulKilled(SoulScriptableObject soulData)
     {
         experience += soulData.experience;
     }

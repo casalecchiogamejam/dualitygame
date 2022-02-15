@@ -46,4 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: -3587436137041797425, guid: 29e132bb7731c4e4b9ff134698099181,
     type: 3}
+  extraSpawnDelaySeconds: 0
   spawnDelaySeconds: 0.5
+  extraEnemiesToSpawn: 0

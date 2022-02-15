@@ -19,7 +19,7 @@ public class EnemyManager : EnemyBaseManager
 
     void OnEnable()
     {
-        agent.speed = data.speed;
+        agent.speed = data.movingSpeed;
         currentLife = data.life;
     }
 
@@ -40,11 +40,17 @@ public class EnemyManager : EnemyBaseManager
 
     private void OnDeath()
     {
-        GameManager.instance.player.OnEnemyKilled(data);
-        StartCoroutine(GameManager.instance.enemiesPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
-        GameManager.instance.soulsPool.GetElemFromPool(transform);
+        // istantiate soul
+        GameObject soul = GameManager.instance.soulsPool.GetElemFromPool(transform);
+        soul.transform.rotation = transform.rotation;
+
+        // generate particles effect
         GameObject particles = GameObject.Instantiate(deathParticles);
         particles.transform.position = transform.position;
+
+        // destroy enemy
+        GameManager.instance.player.OnEnemyKilled(data);
+        StartCoroutine(GameManager.instance.enemiesPool.DestroyObjectInstantiatedFromPool(gameObject, 0));
     }
 
     private void OnGetDamage()

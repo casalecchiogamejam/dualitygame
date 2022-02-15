@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoulManager : EnemyBaseManager
 {
-    public EnemyScriptableObject data;
+    public SoulScriptableObject data;
     public bool absorbed = false;
 
     void FixedUpdate()
@@ -14,11 +14,11 @@ public class SoulManager : EnemyBaseManager
             Vector3 playerPosition = GameManager.instance.player.transform.position;
             Vector3 absorbingDirection = -(transform.position - playerPosition).normalized;
 
-            transform.position += absorbingDirection * data.speed * 5 * Time.deltaTime;
+            transform.position += absorbingDirection * data.absorbingSpeed * Time.deltaTime;
         }
         else
         {
-            transform.position += Vector3.up * data.speed * Time.deltaTime;
+            transform.position += Vector3.up * data.movingSpeed * Time.deltaTime;
         }
 
     }

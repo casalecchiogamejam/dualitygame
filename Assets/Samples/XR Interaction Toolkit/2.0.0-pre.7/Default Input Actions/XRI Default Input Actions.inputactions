@@ -207,13 +207,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Trigger",
-                    "type": "Value",
-                    "id": "6f8da412-a486-42be-9aeb-400a857a37dc",
+                    "name": "Switch World",
+                    "type": "Button",
+                    "id": "1a0be415-c8b2-4e21-91eb-6047b4392eec",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -582,12 +582,12 @@
                 },
                 {
                     "name": "",
-                    "id": "16d3a78b-6c8b-4c11-9582-df090655f769",
-                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "id": "ee882a89-afc1-4986-90ed-6253bed172db",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Trigger",
+                    "action": "Switch World",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -749,15 +749,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Trigger",
-                    "type": "Button",
-                    "id": "28c8af24-6b9f-4ebf-8c70-3cafd586aa73",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1110,17 +1101,6 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Press Value",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a49577d4-fe70-4db5-9bb3-e7d9ab25decf",
-                    "path": "<XRController>{RightHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Trigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
