@@ -26,24 +26,55 @@ public class GameManager : MonoBehaviour
     public GenericObjectPooling soulsPool;
     public PlayerManager player;
     public WorldsManager worldsManager;
+    public GameOverLayer gameOverLayer;
     public VolumeSwitcher volumeSwitcher;
-    [HideInInspector]
-    public bool gripLeftPressed = false;
-    [HideInInspector]
-    public bool gripRightPressed = false;
+
+    public bool IsGamePaused
+    {
+        get { return Time.timeScale == 0; }
+        private set { Time.timeScale = value ? 0 : 1; }
+    }
+
+    [SerializeField] float slowMotionFactor = 0.5f;
+    public bool IsSlowMotionActive
+    {
+        get
+        {
+            return Time.timeScale == slowMotionFactor;
+        }
+        private set
+        {
+            if (value && !IsGamePaused)
+                Time.timeScale = slowMotionFactor;
+            else if (!IsGamePaused)
+                Time.timeScale = 1;
+        }
+    }
+
+    [HideInInspector] public bool gripLeftPressed = false;
+    [HideInInspector] public bool gripRightPressed = false;
 
     private List<GameObject> allActiveObjs;
 
 
+
     private void Awake()
     {
-        if(_instance==null)
+        if (_instance == null)
         {
             _instance = GetComponent<GameManager>();
         }
 
         allActiveObjs = new List<GameObject>();
         CreateAllPoolLists();
+    }
+
+    void Update()
+    {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.M))
+            ToggleSlowMotion();
+#endif
     }
 
     private void CreateAllPoolLists()
@@ -66,19 +97,18 @@ public class GameManager : MonoBehaviour
         return allActiveObjs;
     }
 
-    public void OnGripLeftPressed(InputAction.CallbackContext context)
+    public void PauseGame()
     {
-        if(context.started)
-            gripLeftPressed = true;
-        else if(context.canceled)
-            gripLeftPressed = false;
+        IsGamePaused = false;
     }
 
-    public void OnGripRightPressed(InputAction.CallbackContext context)
+    public void ResumeGame()
     {
-        if (context.started)
-            gripRightPressed = true;
-        else if (context.canceled)
-            gripRightPressed = false;
+        IsGamePaused = true;
+    }
+
+    public void ToggleSlowMotion()
+    {
+        IsSlowMotionActive = !IsSlowMotionActive;
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -37,7 +38,8 @@ public class PlayerManager : MonoBehaviour
     {
         if (collisionInfo.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("YOU DIED");
+            // GAME OVER
+            GameManager.instance.PauseGame();
         }
 
         if (collisionInfo.gameObject.CompareTag("Soul"))

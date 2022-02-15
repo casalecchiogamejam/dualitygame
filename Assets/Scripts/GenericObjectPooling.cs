@@ -26,6 +26,7 @@ public class GenericObjectPooling : MonoBehaviour
         if (inactivePoolObjs.Count > 0)
         {
             GameObject toEnableGO = inactivePoolObjs[0];
+            Debug.Log("recycling " + toEnableGO.name);
             toEnableGO.transform.position = posRotToInstantiate.position;
             toEnableGO.transform.rotation = posRotToInstantiate.rotation;
             inactivePoolObjs.Remove(toEnableGO);
@@ -35,6 +36,7 @@ public class GenericObjectPooling : MonoBehaviour
         else
         {
             GameObject toInstantiate = Instantiate(prefabToInstantiate, gameObject.transform);
+            Debug.Log("create new " + toInstantiate.name);
             toInstantiate.transform.position = posRotToInstantiate.position;
             toInstantiate.transform.rotation = posRotToInstantiate.rotation;
             toInstantiate.SetActive(true);

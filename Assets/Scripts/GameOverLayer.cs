@@ -13,17 +13,6 @@ public class GameOverLayer : MonoBehaviour
     Scores highScores = new Scores();
 
 
-    void Start()
-    {
-        loadHighScores();
-
-        addScore("pippo", 123, 1);
-        addScore("pippo", 123, 1);
-        addScore("pippo", 123, 1);
-        loadScoresPrefab();
-    }
-
-
     void loadScoresPrefab()
     {
         foreach (UserScore score in highScores.scores)

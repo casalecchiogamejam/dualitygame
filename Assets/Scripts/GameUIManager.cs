@@ -14,7 +14,7 @@ public class GameUIManager : MonoBehaviour
 
         if (player != null)
         {
-            // levelText.text = player.level.ToString();
+            levelText.text = player.level.ToString();
             // scoreText.text = player.score.ToString();
             experienceBar.fillAmount = player.experiencePercent;
         }

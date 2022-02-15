@@ -6,7 +6,6 @@ public class EnemySpawner : MonoBehaviour
 {
     public EnemyBaseManager spawnedEnemy;
 
-    public float extraSpawnDelaySeconds;
     public float spawnDelaySeconds;
 
     void Start()
@@ -19,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             GameManager.instance.enemiesPool.GetElemFromPool(transform);
-            yield return new WaitForSecondsRealtime(spawnDelaySeconds);
+            yield return new WaitForSeconds(spawnDelaySeconds);
         }
     }
 }
