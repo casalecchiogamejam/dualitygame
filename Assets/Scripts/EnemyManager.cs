@@ -11,15 +11,10 @@ public class EnemyManager : EnemyBaseManager
     private NavMeshAgent agent;
     private int currentLife;
 
-    void Awake()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        agent.destination = GameManager.instance.player.transform.position;
-    }
-
     void OnEnable()
     {
-        agent.speed = data.movingSpeed;
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = GameManager.instance.player.transform.position; agent.speed = data.movingSpeed;
         currentLife = data.life;
     }
 
