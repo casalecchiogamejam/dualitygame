@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1479
+  controlID: 150
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 1178
+  controlID: 125
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 1184
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 1480
+  controlID: 151
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,8 +320,8 @@ MonoBehaviour:
     y: 0
     width: 1026
     height: 871.3333
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -563,8 +563,8 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 24.666666}
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
@@ -613,9 +613,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -112.87175, y: -33.87114, z: 95.8595}
+    m_Target: {x: -2.9691558, y: -1.3854553, z: 35.741318}
     speed: 2
-    m_Value: {x: -112.87175, y: -33.87114, z: 95.8595}
+    m_Value: {x: -2.9691546, y: -1.385454, z: 35.741318}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -662,13 +662,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.13576381, y: 0.51559377, z: -0.0831855, w: -0.8419388}
+    m_Target: {x: -0.29667407, y: 0.35922837, z: -0.121647626, w: -0.8764763}
     speed: 2
-    m_Value: {x: -0.12967983, y: 0.51365936, z: -0.07892533, w: -0.84445727}
+    m_Value: {x: -0.2953488, y: 0.359398, z: -0.12110438, w: -0.8768899}
   m_Size:
-    m_Target: 86.89838
+    m_Target: 1.3435028
     speed: 2
-    m_Value: 100.46055
+    m_Value: 1.3435445
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -885,23 +885,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ae790000
-      m_LastClickedID: 31150
-      m_ExpandedIDs: 5416fdffdab4fdffd2f5fdff905affff9a5affff7287ffff7c87ffff7c8fffff868fffffe2aaffffecaaffff06fbffff20fbffff2efbffff36fbffffee780000f8780000207900002e790000367900009c790000b8790000ca790000ce790000ee790000f6790000
+      m_SelectedIDs: dccdffff
+      m_LastClickedID: -12836
+      m_ExpandedIDs: 06ceffff84e0ffffdce2ffff0ee7ffff36fbffff028500000a8500002a850000708500008c8500009e850000a2850000ca850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Particle System Force Field
-        m_OriginalName: Particle System Force Field
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -150314
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -941,7 +941,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: Absorb
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -952,10 +952,9 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Materials
+    m_Folders: []
     m_Globs: []
-    m_OriginalText: Absorb
+    m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders:
@@ -968,7 +967,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 4.999939}
     m_SelectedIDs: 66800000
     m_LastClickedID: 32870
-    m_ExpandedIDs: ffffffff00000000887d00008a7d00008c7d00008e7d0000907d0000927d0000947d0000967d0000987d00009a7d0000e27f0000
+    m_ExpandedIDs: 00000000827d0000847d0000867d0000887d00008a7d00008c7d00008e7d0000907d0000927d0000947d0000967d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -993,24 +992,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 622.99994}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000887d00008a7d00008c7d00008e7d0000907d0000947d0000967d0000987d00009a7d0000ae7f0000e27f0000
+    m_ExpandedIDs: ffffffff00000000827d0000847d0000867d0000887d0000907d0000927d0000967d00001e7e00002c7e00002e7e0000307e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: LookSame
+      m_OriginalName: LookSame
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 35068
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -1023,7 +1022,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1084,7 +1083,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1

@@ -1689,9 +1689,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1017959650}
   - {fileID: 537839233}
   - {fileID: 242879542}
+  - {fileID: 1017959650}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1705,7 +1705,7 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Spawner Prefab (2)
+      value: Enemy Spawner Medium
       objectReference: {fileID: 0}
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -1721,12 +1721,12 @@ PrefabInstance:
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -2387,7 +2387,7 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Spawner Prefab (1)
+      value: Enemy Spawner Near
       objectReference: {fileID: 0}
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -2408,7 +2408,7 @@ PrefabInstance:
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -4805,7 +4805,7 @@ PrefabInstance:
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Spawner Prefab
+      value: 'Enemy Spawner Far '
       objectReference: {fileID: 0}
     - target: {fileID: 1621825109490047699, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
@@ -4821,12 +4821,12 @@ PrefabInstance:
     - target: {fileID: 3014134102474423369, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: spawnDelaySeconds
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6199465687461108298, guid: 5dc977e316daa16478684d7bcfa741b2,
         type: 3}
